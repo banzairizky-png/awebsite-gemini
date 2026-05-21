@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALRZ Concepts | Jasa Desain Logo & Identitas Brand Profesional</title>
+    <meta name="description" content="Tingkatkan identitas merek Anda dengan desain logo profesional dan unik dari ALRZ Concepts. Pesan sekarang!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#faf5ff',   // Sangat terang ungu-merah muda
+                            100: '#f3e8ff',  // Ungu muda untuk aksen latar belakang
+                            500: '#a855f7',  // Ungu medium
+                            600: '#8b5cf6',  // Violet/Ungu utama
+                            700: '#7c3aed',  // Violet tua untuk teks hover
+                            900: '#4c1d95',  // Ungu gelap untuk kontras tinggi
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'slide-up': 'slideUp 0.5s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        /* Utilities */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Portfolio Grid Hover Effect */
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+
+        /* Premium Multicolored Gradient */
+        .gradient-alrz {
+            background: linear-gradient(135deg, #f97316 0%, #a855f7 35%, #3b82f6 70%, #eab308 100%);
+        }
+        .text-gradient-alrz {
+            background: linear-gradient(135deg, #f97316 0%, #a855f7 35%, #3b82f6 70%, #eab308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-xl gradient-alrz flex items-center justify-center mr-3 shadow-md">
+                        <i class="ph ph-vector-three text-white text-xl"></i>
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight text-gray-900">ALRZ <span class="text-gradient-alrz font-black">Concepts</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Beranda</a>
+                    <a href="#portofolio" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Portofolio</a>
+                    <a href="#ai-assistant" class="text-gray-600 hover:text-brand-600 font-medium transition-colors flex items-center">
+                        <span class="mr-1">Asisten AI</span>
+                        <span class="gradient-alrz text-white text-[10px] px-2 py-0.5 rounded-full font-bold animate-pulse-slow">BARU</span>
+                    </a>
+                    <a href="#layanan" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Layanan & Harga</a>
+                    <a href="#kontak" class="gradient-alrz text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Hubungi Saya</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-600 focus:outline-none p-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" class="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-600 mobile-link">Beranda</a>
+                <a href="#portofolio" class="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-600 mobile-link">Portofolio</a>
+                <a href="#ai-assistant" class="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-600 mobile-link">Asisten AI (Baru)</a>
+                <a href="#layanan" class="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-600 mobile-link">Layanan & Harga</a>
+                <a href="#kontak" class="block px-3 py-3 rounded-md text-base font-medium gradient-alrz text-white mt-4 text-center mobile-link">Hubungi Saya</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="currentColor" stroke-width="2" class="text-brand-600"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto opacity-0 animate-slide-up" style="animation-delay: 0.1s;">
+                <span class="inline-block py-1 px-4 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold mb-6 border border-brand-200">
+                    ? Tersedia untuk proyek branding baru
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Desain Logo yang <span class="text-gradient-alrz font-black">Bercerita</span> Tentang Karakter Brand Anda.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 mb-10 leading-relaxed">
+                    ALRZ Concepts membantu bisnis membangun identitas visual yang kuat, ikonik, dan mudah diingat melalui kreasi logo kelas dunia yang dipersonalisasi.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#portofolio" class="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all shadow-lg flex items-center justify-center group">
+                        Lihat Karya Terbaik
+                        <i class="ph ph-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#ai-assistant" class="w-full sm:w-auto px-8 py-4 gradient-alrz text-white rounded-full font-semibold transition-all shadow-lg flex items-center justify-center hover:opacity-95">
+                        <i class="ph ph-sparkle mr-2"></i> Konsultasi Konsep (AI)
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Statistics/Trust Indicators -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-200 pt-10 opacity-0 animate-slide-up" style="animation-delay: 0.3s;">
+                <div class="text-center">
+                    <p class="text-4xl font-extrabold text-gray-900 mb-1">50+</p>
+                    <p class="text-sm text-gray-500">Klien Puas</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-extrabold text-gray-900 mb-1">120+</p>
+                    <p class="text-sm text-gray-500">Logo Dibuat</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-extrabold text-gray-900 mb-1">3</p>
+                    <p class="text-sm text-gray-500">Tahun Pengalaman</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-extrabold text-gray-900 mb-1">100%</p>
+                    <p class="text-sm text-gray-500">Karya Orisinal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Cara Kerja Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Proses kreatif yang tersusun rapi untuk melahirkan identitas visual terbaik bagi brand Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Step 1 -->
+                <div class="relative p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 font-bold group-hover:gradient-alrz group-hover:text-white transition-all">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Diskusi & Brief</h3>
+                    <p class="text-gray-600">Menganalisis visi bisnis, target demografis, nilai-nilai utama, serta gaya desain impian Anda.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 font-bold group-hover:gradient-alrz group-hover:text-white transition-all">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sketsa & Konsep</h3>
+                    <p class="text-gray-600">Merumuskan beberapa draf konsep logo yang dirancang manual dengan presisi tinggi.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 font-bold group-hover:gradient-alrz group-hover:text-white transition-all">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Revisi & Finalisasi</h3>
+                    <p class="text-gray-600">Melakukan penyelarasan detail berdasarkan umpan balik Anda hingga versi final siap diluncurkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portofolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Portofolio ALRZ</h2>
+                    <p class="text-gray-600">Kumpulan karya logo eksklusif yang dirancang khusus untuk mewakili esensi sejati tiap bisnis.</p>
+                </div>
+                <div class="mt-6 md:mt-0 flex space-x-2 overflow-x-auto pb-2">
+                    <button class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm whitespace-nowrap">Semua</button>
+                    <button class="px-4 py-2 bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 rounded-full text-sm whitespace-nowrap">Minimalis</button>
+                    <button class="px-4 py-2 bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 rounded-full text-sm whitespace-nowrap">Mascot</button>
+                    <button class="px-4 py-2 bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 rounded-full text-sm whitespace-nowrap">Tipografi</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer aspect-square">
+                    <img src="https://placehold.co/600x600/f8fafc/1e293b?text=Coffee+Shop\nLogo" alt="Portfolio 1" class="portfolio-img w-full h-full object-cover transition-transform duration-500">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange-400 text-sm font-medium mb-1">Kafe & Resto</span>
+                        <h3 class="text-white text-xl font-bold">Kopi Senja</h3>
+                        <p class="text-gray-300 text-sm mt-2">Desain minimalis modern yang menyajikan kesan hangat dan autentik.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer aspect-square">
+                    <img src="https://placehold.co/600x600/f0fdf4/166534?text=Tech+Startup\nLogo" alt="Portfolio 2" class="portfolio-img w-full h-full object-cover transition-transform duration-500">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-purple-400 text-sm font-medium mb-1">Teknologi</span>
+                        <h3 class="text-white text-xl font-bold">NexByte</h3>
+                        <p class="text-gray-300 text-sm mt-2">Logomark modern dan geometris yang melambangkan inovasi tanpa batas.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer aspect-square">
+                    <img src="https://placehold.co/600x600/fffbeb/b45309?text=Real+Estate\nLogo" alt="Portfolio 3" class="portfolio-img w-full h-full object-cover transition-transform duration-500">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-amber-400 text-sm font-medium mb-1">Properti</span>
+                        <h3 class="text-white text-xl font-bold">Griya Indah</h3>
+                        <p class="text-gray-300 text-sm mt-2">Kombinasi monogram terstruktur yang memancarkan kemewahan protektif.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer aspect-square">
+                    <img src="https://placehold.co/600x600/faf5ff/6b21a8?text=Beauty+Salon\nLogo" alt="Portfolio 4" class="portfolio-img w-full h-full object-cover transition-transform duration-500">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-rose-400 text-sm font-medium mb-1">Kecantikan</span>
+                        <h3 class="text-white text-xl font-bold">Aura Glow</h3>
+                        <p class="text-gray-300 text-sm mt-2">Tipografi kustom yang organik, luwes, dan memancarkan estetika kelas tinggi.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer aspect-square">
+                    <img src="https://placehold.co/600x600/eff6ff/1d4ed8?text=Logistics\nLogo" alt="Portfolio 5" class="portfolio-img w-full h-full object-cover transition-transform duration-500">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-blue-400 text-sm font-medium mb-1">Logistik</span>
+                        <h3 class="text-white text-xl font-bold">FastMove</h3>
+                        <p class="text-gray-300 text-sm mt-2">Konsep dinamis memanfaatkan ruang negatif untuk melambangkan kecepatan tinggi.</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer aspect-square">
+                    <img src="https://placehold.co/600x600/fdf4ff/a21caf?text=Esports+Team\nLogo" alt="Portfolio 6" class="portfolio-img w-full h-full object-cover transition-transform duration-500">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-yellow-400 text-sm font-medium mb-1">Esports</span>
+                        <h3 class="text-white text-xl font-bold">Dragon Esports</h3>
+                        <p class="text-gray-300 text-sm mt-2">Logo maskot agresif bergaya ilustratif berenergi tinggi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gemini AI Assistant Section -->
+    <section id="ai-assistant" class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <!-- Floating graphics -->
+        <div class="absolute -right-12 top-20 w-64 h-64 rounded-full bg-orange-100 opacity-45 blur-3xl"></div>
+        <div class="absolute -left-12 bottom-20 w-64 h-64 rounded-full bg-blue-100 opacity-45 blur-3xl"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center py-1.5 px-4 rounded-full bg-gradient-to-r from-orange-100 via-purple-100 to-blue-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-4 border border-brand-200">
+                    <i class="ph ph-sparkle mr-1.5 text-purple-600"></i> Eksklusif & Gratis
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                    Asisten Konsep Logo AI
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kembangkan visi bisnis Anda secara instan menggunakan kecerdasan buatan Gemini untuk merancang filosofi, metafora simbolis, dan warna ideal brand Anda.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <!-- AI Input Panel -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-md">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="ph ph-sliders text-purple-600 mr-2"></i> Parameter Brand Anda
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="ai-brand-name" class="block text-sm font-semibold text-gray-700 mb-1">Nama Brand / Bisnis</label>
+                            <input type="text" id="ai-brand-name" placeholder="Misal: Kopi Nusantara, TechVibe" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm">
+                        </div>
+                        <div>
+                            <label for="ai-industry" class="block text-sm font-semibold text-gray-700 mb-1">Kategori / Industri</label>
+                            <select id="ai-industry" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm bg-white">
+                                <option value="Kuliner / Makanan & Minuman">Kuliner (Makanan & Minuman)</option>
+                                <option value="Teknologi / SaaS / Digital">Teknologi & Startup</option>
+                                <option value="Kecantikan / Fashion / Kosmetik">Kecantikan & Fashion</option>
+                                <option value="Kesehatan / Medis">Kesehatan & Keafiatan</option>
+                                <option value="Properti / Konstruksi / Arsitek">Properti & Real Estate</option>
+                                <option value="E-Commerce / Toko Online">E-Commerce / Ritel</option>
+                                <option value="Lainnya">Lainnya (Tulis di deskripsi)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ai-vibe" class="block text-sm font-semibold text-gray-700 mb-1">Gaya & Kesan Visual</label>
+                            <select id="ai-vibe" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm bg-white">
+                                <option value="Minimalis, Bersih, Modern">Minimalis & Modern</option>
+                                <option value="Elegan, Mewah, Klasik">Elegan & Klasik (Premium)</option>
+                                <option value="Playful, Ceria, Ramah Anak">Playful & Ramah (Ceria)</option>
+                                <option value="Bold, Berani, Maskulin, Sporty">Bold & Sporty (Kuat)</option>
+                                <option value="Organik, Alami, Ramah Lingkungan">Organik & Alami (Eco-friendly)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ai-description" class="block text-sm font-semibold text-gray-700 mb-1">Tentang Bisnis Anda (Singkat)</label>
+                            <textarea id="ai-description" rows="3" placeholder="Ceritakan apa yang dijual, visi, atau siapa target pasarnya..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm resize-none"></textarea>
+                        </div>
+                        <button id="generate-ai-btn" onclick="generateLogoConcept()" class="w-full py-4 gradient-alrz text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg flex justify-center items-center group hover:scale-[1.01]">
+                            <span class="mr-2 flex items-center"><i class="ph ph-sparkle"></i></span> Hasilkan Konsep Logo <i class="ph ph-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI Output Display -->
+                <div class="lg:col-span-7 bg-gray-50 rounded-3xl border border-gray-200 p-6 sm:p-8 min-h-[460px] flex flex-col justify-between relative overflow-hidden" id="ai-output-container">
+                    <!-- Default Initial State -->
+                    <div id="ai-output-empty" class="text-center py-16 px-4 my-auto">
+                        <div class="w-20 h-20 mx-auto rounded-2xl bg-purple-50 flex items-center justify-center text-4xl mb-6 text-purple-600 border border-purple-100 animate-pulse-slow">
+                            <i class="ph ph-brain"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Belum Ada Konsep Dibuat</h4>
+                        <p class="text-gray-500 text-sm max-w-sm mx-auto">
+                            Isi parameter brand Anda di sebelah kiri lalu klik tombol untuk mengaktifkan imajinasi buatan Gemini API.
+                        </p>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="ai-output-loading" class="hidden text-center py-12 my-auto">
+                        <div class="relative w-20 h-20 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+                            <div class="absolute inset-0 rounded-full border-4 border-purple-500 border-t-transparent animate-spin"></div>
+                            <div class="absolute inset-4 bg-white rounded-full flex items-center justify-center text-2xl text-purple-600">
+                                <i class="ph ph-magic-wand"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 animate-pulse" id="loading-step-text">Menginisialisasi Asisten AI...</h4>
+                        <p class="text-gray-500 text-sm max-w-xs mx-auto">Proses memakan waktu 3-5 detik saja menggunakan kecerdasan Gemini.</p>
+                    </div>
+
+                    <!-- Main Results Display -->
+                    <div id="ai-output-results" class="hidden space-y-6">
+                        <!-- Top Header -->
+                        <div class="flex items-center justify-between border-b border-gray-200 pb-4">
+                            <div>
+                                <h4 class="font-extrabold text-xl text-gray-900" id="res-brand-title">Brand Concept</h4>
+                                <p class="text-sm text-purple-600 font-semibold" id="res-brand-subtitle">Saran Konsep Identitas Visual</p>
+                            </div>
+                            <button onclick="copyToOrderForm()" class="bg-purple-50 text-purple-700 hover:bg-purple-100 px-4 py-2 rounded-full text-xs font-bold flex items-center transition-colors">
+                                <i class="ph ph-copy mr-1.5"></i> Gunakan Konsep Ini
+                            </button>
+                        </div>
+
+                        <!-- Grid Info -->
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <!-- Visual Metaphors -->
+                            <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                                <h5 class="text-sm font-bold text-gray-900 mb-2 flex items-center">
+                                    <i class="ph ph-sketch-logo text-purple-600 mr-1.5"></i> Metafora Simbolik
+                                </h5>
+                                <ul class="space-y-1.5 text-xs text-gray-600 list-disc list-inside" id="res-metaphors">
+                                    <!-- Dynamic elements -->
+                                </ul>
+                            </div>
+
+                            <!-- Typography -->
+                            <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                                <h5 class="text-sm font-bold text-gray-900 mb-2 flex items-center">
+                                    <i class="ph ph-text-aa text-purple-600 mr-1.5"></i> Tipografi & Huruf
+                                </h5>
+                                <p class="text-xs font-semibold text-gray-800 mb-1" id="res-typo-type">Sans-Serif</p>
+                                <p class="text-[11px] text-gray-500 leading-relaxed" id="res-typo-reason">Alasan kecocokan font...</p>
+                            </div>
+                        </div>
+
+                        <!-- Colors Recommendation -->
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                            <h5 class="text-sm font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="ph ph-palette text-purple-600 mr-1.5"></i> Palet Warna Psikologis
+                            </h5>
+                            <!-- Swatches -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-1" id="res-colors-grid">
+                                <!-- Dynamic swatches -->
+                            </div>
+                        </div>
+
+                        <!-- Tagline alternatives -->
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                            <h5 class="text-sm font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="ph ph-quotes text-purple-600 mr-1.5"></i> Usulan Tagline / Slogan
+                            </h5>
+                            <div class="flex flex-wrap gap-2" id="res-taglines">
+                                <!-- Dynamic tags -->
+                            </div>
+                        </div>
+
+                        <!-- Filosofi Naratif -->
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                            <h5 class="text-sm font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="ph ph-book-open text-purple-600 mr-1.5"></i> Narasi Filosofi Logo
+                            </h5>
+                            <p class="text-xs text-gray-600 leading-relaxed italic" id="res-narrative">
+                                Filosofi konsep logo...
+                            </p>
+                        </div>
+
+                        <!-- Order Promo Alert -->
+                        <div class="bg-purple-50 border border-purple-200 p-4 rounded-2xl flex items-start">
+                            <i class="ph ph-info text-purple-600 text-xl mr-3 mt-0.5"></i>
+                            <div>
+                                <h6 class="text-xs font-bold text-purple-900">Suka dengan konsep usulan AI ini?</h6>
+                                <p class="text-[11px] text-purple-700 leading-relaxed mt-0.5">
+                                    Klik "Gunakan Konsep Ini" untuk mengirimkan brief ke studio desain profesional ALRZ Concepts secara otomatis. Kami akan mengubah ide dasar AI ini menjadi mahakarya logo berkualitas vektor resolusi tinggi!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="layanan" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pilihan Paket Investasi Brand</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Investasi bernilai tinggi untuk masa depan representasi merek profesional Anda tanpa kompromi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Package -->
+                <div class="border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all bg-white flex flex-col hover:-translate-y-1 duration-300">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Starter</h3>
+                    <p class="text-gray-500 text-sm mb-6">Cocok untuk UMKM rintisan baru.</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-gray-900">Rp 499k</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-orange-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">2 Pilihan Konsep Logo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-orange-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">3x Kesempatan Revisi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-orange-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">File Resolusi Tinggi (PNG/JPG)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-orange-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">Waktu pengerjaan 3-5 hari</span>
+                        </li>
+                    </ul>
+                    <a href="#kontak" onclick="document.getElementById('pesan').value='Halo, saya tertarik dengan paket desain logo Starter.';" class="w-full block text-center py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold rounded-xl transition-colors">
+                        Pilih Starter
+                    </a>
+                </div>
+
+                <!-- Pro Package (Highlighted with Gradient Border) -->
+                <div class="p-[2px] rounded-[24px] gradient-alrz shadow-xl flex flex-col hover:-translate-y-2 duration-300 transform md:-translate-y-4">
+                    <div class="bg-white p-8 rounded-[22px] flex-grow flex flex-col relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                            Paling Populer
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 mt-2">Professional</h3>
+                        <p class="text-gray-500 text-sm mb-6">Sempurna untuk akselerasi bisnis tumbuh.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-gray-900">Rp 1.2 Juta</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-start">
+                                <i class="ph ph-check-circle text-purple-500 text-xl mr-3 mt-0.5"></i>
+                                <span class="text-gray-600 text-sm font-semibold">4 Pilihan Konsep Logo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ph ph-check-circle text-purple-500 text-xl mr-3 mt-0.5"></i>
+                                <span class="text-gray-600 text-sm font-semibold">Revisi Tanpa Batas*</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ph ph-check-circle text-purple-500 text-xl mr-3 mt-0.5"></i>
+                                <span class="text-gray-600 text-sm">File Master Vector (AI/EPS/SVG)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ph ph-check-circle text-purple-500 text-xl mr-3 mt-0.5"></i>
+                                <span class="text-gray-600 text-sm">Color Palette & Panduan Font</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ph ph-check-circle text-purple-500 text-xl mr-3 mt-0.5"></i>
+                                <span class="text-gray-600 text-sm">Waktu pengerjaan 5-7 hari</span>
+                            </li>
+                        </ul>
+                        <a href="#kontak" onclick="document.getElementById('pesan').value='Halo, saya tertarik dengan paket desain logo Professional.';" class="w-full block text-center py-3 px-4 gradient-alrz text-white font-semibold rounded-xl transition-all shadow-md hover:opacity-95">
+                            Pilih Professional
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Package -->
+                <div class="border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all bg-white flex flex-col hover:-translate-y-1 duration-300">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Branding</h3>
+                    <p class="text-gray-500 text-sm mb-6">Solusi identitas korporat menyeluruh.</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-gray-900">Rp 3.5 Juta</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-blue-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">5+ Pilihan Konsep Logo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-blue-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">Semua File Master & Resolusi Tinggi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-blue-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">Buku Pedoman Identitas (Brand Guidelines)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-blue-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">Desain Kartu Nama, Kop Surat, & Amplop</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph ph-check-circle text-blue-500 text-xl mr-3 mt-0.5"></i>
+                            <span class="text-gray-600 text-sm">Dukungan Prioritas VIP Utama</span>
+                        </li>
+                    </ul>
+                    <a href="#kontak" onclick="document.getElementById('pesan').value='Halo, saya tertarik dengan paket Branding lengkap dari ALRZ Concepts.';" class="w-full block text-center py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold rounded-xl transition-colors">
+                        Konsultasikan Dulu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-orange-500 opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">Siap Membuat Brand Anda Menonjol?</h2>
+                    <p class="text-gray-400 mb-8 text-lg">Konsultasikan kebutuhan desain logo Anda bersama kami. ALRZ Concepts siap melahirkan identitas visual impian Anda.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Email Card -->
+                        <div class="flex items-center p-4 rounded-2xl bg-gray-800/50 border border-gray-700/50 backdrop-blur-sm transition-all hover:border-orange-500/50">
+                            <div class="w-12 h-12 rounded-xl gradient-alrz flex items-center justify-center mr-4 shadow-md">
+                                <i class="ph ph-envelope-simple text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Hubungi via Email</p>
+                                <p class="font-semibold text-sm sm:text-base">banzairizky@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- WhatsApp Card -->
+                        <div class="flex items-center p-4 rounded-2xl bg-gray-800/50 border border-gray-700/50 backdrop-blur-sm transition-all hover:border-purple-500/50">
+                            <div class="w-12 h-12 rounded-xl gradient-alrz flex items-center justify-center mr-4 shadow-md">
+                                <i class="ph ph-whatsapp-logo text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">WhatsApp Resmi</p>
+                                <p class="font-semibold text-sm sm:text-base">+62 831-9757-0939</p>
+                            </div>
+                        </div>
+                        <!-- Instagram Card -->
+                        <div class="flex items-center p-4 rounded-2xl bg-gray-800/50 border border-gray-700/50 backdrop-blur-sm transition-all hover:border-blue-500/50">
+                            <div class="w-12 h-12 rounded-xl gradient-alrz flex items-center justify-center mr-4 shadow-md">
+                                <i class="ph ph-instagram-logo text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Instagram Portofolio</p>
+                                <p class="font-semibold text-sm sm:text-base">@alrzz_personality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Mulai Kolaborasi</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="nama" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-gray-900 bg-gray-50">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email / WhatsApp Anda</label>
+                            <input type="text" id="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-gray-900 bg-gray-50">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block text-sm font-semibold text-gray-700 mb-1">Ceritakan tentang proyek/bisnis Anda</label>
+                            <textarea id="pesan" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-gray-900 bg-gray-50 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 gradient-alrz hover:opacity-95 text-white font-extrabold rounded-xl transition-all shadow-lg flex justify-center items-center">
+                            Kirim Pesan Brief <i class="ph ph-paper-plane-right ml-2"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-xl flex items-center">
+                        <i class="ph ph-check-circle text-2xl mr-2 text-green-600"></i>
+                        <span class="text-sm font-semibold">Pesan terkirim dengan sukses! Tim ALRZ Concepts akan segera merespons Anda.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-10 text-center border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center items-center mb-6">
+                <div class="w-8 h-8 rounded-lg gradient-alrz flex items-center justify-center mr-2 shadow">
+                    <i class="ph ph-vector-three text-white text-md"></i>
+                </div>
+                <span class="font-extrabold text-xl text-white">ALRZ <span class="text-gradient-alrz font-black">Concepts</span></span>
+            </div>
+            <p class="text-sm">&copy; <span id="year"></span> ALRZ Concepts. Didesain dengan penuh kreativitas di Indonesia.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            } else {
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+                navbar.classList.remove('bg-transparent', 'border-transparent');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95');
+                navbar.classList.add('border-gray-200');
+            }
+        });
+
+        // Form Submission Simulation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btnSubmit = this.querySelector('button[type="submit"]');
+            
+            // Loading state
+            btnSubmit.innerHTML = '<i class="ph ph-spinner animate-spin mr-2"></i> Mengirim...';
+            btnSubmit.disabled = true;
+            btnSubmit.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // Simulate network request
+            setTimeout(() => {
+                this.reset();
+                this.style.display = 'none';
+                document.getElementById('successMessage').classList.remove('hidden');
+                document.getElementById('successMessage').classList.add('flex');
+            }, 1500);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Global variable to store active response data for copying
+        let generatedConceptData = null;
+
+        // Exponential backoff fetch function
+        async function fetchWithRetry(url, options, retries = 3, delay = 1000) {
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) {
+                    if (response.status === 429 && retries > 0) {
+                        await new Promise(res => setTimeout(res, delay));
+                        return fetchWithRetry(url, options, retries - 1, delay * 2);
+                    }
+                    throw new Error(`API returned error code ${response.status}`);
+                }
+                return response;
+            } catch (error) {
+                if (retries > 0) {
+                    await new Promise(res => setTimeout(res, delay));
+                    return fetchWithRetry(url, options, retries - 1, delay * 2);
+                }
+                throw error;
+            }
+        }
+
+        async function generateLogoConcept() {
+            const brandName = document.getElementById('ai-brand-name').value.trim();
+            const industry = document.getElementById('ai-industry').value;
+            const vibe = document.getElementById('ai-vibe').value;
+            const description = document.getElementById('ai-description').value.trim();
+
+            if (!brandName) {
+                alert("Masukkan Nama Brand / Bisnis Anda terlebih dahulu.");
+                return;
+            }
+
+            // Get elements
+            const emptyState = document.getElementById('ai-output-empty');
+            const loadingState = document.getElementById('ai-output-loading');
+            const resultsState = document.getElementById('ai-output-results');
+            const loadingText = document.getElementById('loading-step-text');
+
+            // Toggle visibility
+            emptyState.classList.add('hidden');
+            resultsState.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+
+            // Rotate loading subtitle texts dynamically
+            const steps = [
+                "Menganalisis esensi brand...",
+                "Merancang representasi simbolik...",
+                "Memetakan psikologi palet warna...",
+                "Menyelaraskan harmoni tipografi...",
+                "Menyusun filosofi identitas..."
+            ];
+            let currentStep = 0;
+            const interval = setInterval(() => {
+                currentStep = (currentStep + 1) % steps.length;
+                loadingText.innerText = steps[currentStep];
+            }, 1000);
+
+            // Setup Gemini API prompt & request
+            const systemPrompt = "Anda adalah Pakar Strategi Kreatif dan desainer identitas visual profesional dari studio ALRZ Concepts yang berfokus pada logo bercerita dan bermakna mendalam. Buatkan rekomendasi identitas visual inovatif, relevan, dan filosofis sesuai dengan brand input klien. Seluruh respon wajib dikembalikan dalam skema JSON terstruktur murni berbahasa Indonesia.";
+            
+            const userPrompt = `Rancanglah konsep logo untuk brand berikut:
+            - Nama Brand: ${brandName}
+            - Kategori Industri: ${industry}
+            - Gaya Visual / Kesan yang Diinginkan: ${vibe}
+            - Deskripsi Tambahan: ${description || 'Tidak ada deskripsi tambahan.'}
+            
+            Buatkan data JSON yang lengkap dan profesional.`;
+
+            // Prepare JSON schema
+            const payload = {
+                contents: [{ parts: [{ text: userPrompt }] }],
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "brand_title": { "type": "STRING", "description": "Nama Brand yang dirancang dengan tag estetik pendek" },
+                            "metafora_visual": {
+                                "type": "ARRAY",
+                                "items": { "type": "STRING" },
+                                "description": "3 usulan simbol visual unik konseptual (misal: 'Biji kopi yang melebur membentuk siluet burung hantu')"
+                            },
+                            "palet_warna": {
+                                "type": "ARRAY",
+                                "items": {
+                                    "type": "OBJECT",
+                                    "properties": {
+                                        "warna": { "type": "STRING", "description": "Nama warna dalam Bahasa Indonesia" },
+                                        "hex": { "type": "STRING", "description": "Hex code warna, wajib diawali #, misal #22C55E" },
+                                        "psikologi": { "type": "STRING", "description": "Makna filosofis psikologis warna ini bagi brand" }
+                                    },
+                                    "required": ["warna", "hex", "psikologi"]
+                                },
+                                "description": "Maksimal 4 warna utama harmoni"
+                            },
+                            "tipografi": {
+                                "type": "OBJECT",
+                                "properties": {
+                                    "jenis": { "type": "STRING", "description": "Jenis gaya tipografi (misal: Modern Minimalist Sans-Serif, Elegant Custom Serif)" },
+                                    "alasan": { "type": "STRING", "description": "Alasan fungsional dan keterbacaan mengapa tipe font ini paling cocok" }
+                                },
+                                "required": ["jenis", "alasan"]
+                            },
+                            "tagline": {
+                                "type": "ARRAY",
+                                "items": { "type": "STRING" },
+                                "description": "3 ide slogan/tagline pendek, puitis, dan berkelas"
+                            },
+                            "konsep_narasi": {
+                                "type": "STRING",
+                                "description": "Satu paragraf cerita narasi filosofis utuh yang menyatukan seluruh elemen logo"
+                            }
+                        },
+                        "required": ["brand_title", "metafora_visual", "palet_warna", "tipografi", "tagline", "konsep_narasi"]
+                    }
+                },
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                }
+            };
+
+            // Call API
+            const apiKey = ""; // Canvas runtime handles empty string key injection
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                clearInterval(interval);
+
+                const rawText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (!rawText) {
+                    throw new Error("Gagal memperoleh respons text dari Gemini API.");
+                }
+
+                // Parse structured output
+                const parsedData = JSON.parse(rawText);
+                generatedConceptData = parsedData; // save globally
+
+                // Render structured output
+                displayGeneratedResults(parsedData);
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                clearInterval(interval);
+                
+                // Show graceful fallback
+                alert("Maaf, terjadi kendala saat menghubungkan ke server AI. Kami akan menampilkan konsep default sebagai inspirasi Anda.");
+                
+                const fallbackData = {
+                    brand_title: brandName,
+                    metafora_visual: [
+                        "Ikon monogram inisial melengkung dinamis",
+                        "Elemen garis minimalis berkesan premium",
+                        "Representasi abstrak sesuai kategori " + industry
+                    ],
+                    palet_warna: [
+                        { warna: "Oranye Sunset", hex: "#f97316", psikologi: "Melambangkan kreativitas yang membara dan penuh inovasi." },
+                        { warna: "Ultra Violet", hex: "#8b5cf6", psikologi: "Menambahkan sentuhan modernitas, keunikan kelas atas, dan visi futuristik." }
+                    ],
+                    tipografi: {
+                        jenis: "Geometric Modern Sans-Serif",
+                        alasan: "Memberikan impresi modern, terpercaya, dan sangat bersih untuk identitas digital."
+                    },
+                    tagline: ["Evolusi Menuju Masa Depan", "Kualitas Terbaik di Tiap Sentuhan", "Identitas Kuat, Bisnis Hebat"],
+                    konsep_narasi: `Konsep logo untuk ${brandName} didesain dengan memadukan unsur kekuatan profesional serta fleksibilitas modern. Representasi warna dan keseimbangan geometri menyimbolkan tekad kuat dalam menghadirkan layanan terbaik pada industri ${industry}.`
+                };
+                generatedConceptData = fallbackData;
+                displayGeneratedResults(fallbackData);
+            } finally {
+                loadingState.classList.add('hidden');
+            }
+        }
+
+        function displayGeneratedResults(data) {
+            const resultsState = document.getElementById('ai-output-results');
+            
+            // 1. Title
+            document.getElementById('res-brand-title').innerText = data.brand_title;
+
+            // 2. Metaphors
+            const metaphorsUl = document.getElementById('res-metaphors');
+            metaphorsUl.innerHTML = '';
+            data.metafora_visual.forEach(item => {
+                const li = document.createElement('li');
+                li.innerText = item;
+                metaphorsUl.appendChild(li);
+            });
+
+            // 3. Typo
+            document.getElementById('res-typo-type').innerText = data.tipografi.jenis;
+            document.getElementById('res-typo-reason').innerText = data.tipografi.alasan;
+
+            // 4. Color Swatches
+            const colorsGrid = document.getElementById('res-colors-grid');
+            colorsGrid.innerHTML = '';
+            data.palet_warna.forEach(colorObj => {
+                const swatchCard = document.createElement('div');
+                swatchCard.className = 'p-2 border border-gray-100 rounded-xl bg-gray-50 flex flex-col items-center text-center';
+                swatchCard.innerHTML = `
+                    <div class="w-10 h-10 rounded-lg shadow-inner mb-2" style="background-color: ${colorObj.hex}"></div>
+                    <span class="text-[10px] font-bold text-gray-800 truncate w-full">${colorObj.warna}</span>
+                    <span class="text-[9px] font-mono text-gray-400 select-all">${colorObj.hex}</span>
+                    <p class="text-[8px] text-gray-500 mt-1 leading-tight line-clamp-3" title="${colorObj.psikologi}">${colorObj.psikologi}</p>
+                `;
+                colorsGrid.appendChild(swatchCard);
+            });
+
+            // 5. Taglines
+            const taglinesDiv = document.getElementById('res-taglines');
+            taglinesDiv.innerHTML = '';
+            data.tagline.forEach(tag => {
+                const badge = document.createElement('span');
+                badge.className = 'px-2.5 py-1 bg-purple-50 text-purple-800 rounded-full text-[10px] font-semibold border border-purple-100';
+                badge.innerText = `"${tag}"`;
+                taglinesDiv.appendChild(badge);
+            });
+
+            // 6. Narrative
+            document.getElementById('res-narrative').innerText = data.konsep_narasi;
+
+            // Unhide results
+            resultsState.classList.remove('hidden');
+        }
+
+        function copyToOrderForm() {
+            if (!generatedConceptData) return;
+
+            const formMsgBox = document.getElementById('pesan');
+            if (formMsgBox) {
+                // Formatting brief into premium text output
+                const briefText = `Halo ALRZ Concepts!\n\nSaya ingin memesan paket desain dengan menerapkan Konsep Hasil Asisten AI berikut:\n\n` +
+                    `• Nama Brand: ${generatedConceptData.brand_title}\n` +
+                    `• Metafora Simbolik:\n${generatedConceptData.metafora_visual.map(m => `  - ${m}`).join('\n')}\n` +
+                    `• Rekomendasi Warna:\n${generatedConceptData.palet_warna.map(c => `  - ${c.warna} (${c.hex})`).join('\n')}\n` +
+                    `• Gaya Tipografi: ${generatedConceptData.tipografi.jenis}\n` +
+                    `• Ide Tagline: "${generatedConceptData.tagline.join('" / "')}"\n\n` +
+                    `Mohon realisasikan konsep dasar ini menjadi logo profesional yang luar biasa!`;
+
+                // Set value inside contact form textarea
+                formMsgBox.value = briefText;
+
+                // Animate transition & scroll to contact
+                const contactSection = document.getElementById('kontak');
+                if (contactSection) {
+                    const headerOffset = 80;
+                    const elementPosition = contactSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+
+                // Quick visual indicator
+                alert("Konsep logo berhasil disalin ke formulir pemesanan di bawah! Silakan isi data diri Anda dan kirimkan.");
+            }
+        }
+    </script>
+</body>
+</html>
